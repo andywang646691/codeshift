@@ -22,7 +22,8 @@
 
 class CodePlugin {
     constructor() {
-        this.projects = ['tw', 'es', 'com.br', 'de', 'it', 'se', 'nl', 'fi', 'dk', 'pl', 'hu', 'cz'].map(postfix => 'apowersoft.' + postfix)
+        this.projects = ['apowersoft-no.com', 'apowersoft-tr.com']
+        // this.projects = ['tw', 'es', 'com.br', 'de', 'it', 'se', 'nl', 'fi', 'dk', 'pl', 'hu', 'cz'].map(postfix => 'apowersoft.' + postfix)
         this.filePath = 'wp-content/themes/apowersoft/smart-image.php'
         this.commitMessage = 'smart-image 移动端优化'
         this.clearCacheCmd = 'wx clear [project] remove-background-online -s cn-us'

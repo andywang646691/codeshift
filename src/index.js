@@ -41,9 +41,9 @@ class CodeShift {
                 log(chalk.green(`${project} 文件写入成功`))
                 if (isProd) {
                     log(`\n==========#提交至git仓库#==========\n`)
-                    // this.command(`git add ${code.filePath}`)
-                    // this.command(`git commit -m ${code.commitMessage.replace(/\s/g, '\\ ')}`)
-                    // this.command('git push')
+                    this.command(`git add ${code.filePath}`)
+                    this.command(`git commit -m ${code.commitMessage.replace(/\s/g, '\\ ')}`)
+                    this.command('git push')
                     log(`\n==========#开始发布#==========\n`)
                     this.command(`wx publish ${code.filePath} -e=prod`)
                     if (code.clearCacheCmd) {
